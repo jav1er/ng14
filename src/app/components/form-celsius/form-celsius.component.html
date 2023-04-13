@@ -1,0 +1,53 @@
+<!-- <form [formGroup]="celsiusForm" (ngSubmit)="validate()">
+  <div>
+    <label for="nombre">Nombre</label>
+    <input formControlName="name" type="text" />
+    <br />
+    <span> {{ celsiusForm.get("name")?.value }} </span>
+
+  </div>
+  <br />
+  <br />
+  <br />
+  <div>
+    <label for="apellidos">Apellido</label>
+    <input formControlName="lastname" type="text" />
+  </div>
+  <br />
+  <br />
+  <br>
+  <select formControlName="dni" name="dni" id="">
+    <option value="v">venezolano</option>
+    <option value="e">extrangero</option>
+  </select>
+<br>
+<br>
+  <input formControlName="pet" type="checkbox" /> Tiene mascota ?
+
+  {{ celsiusForm.get("pet")?.value ? 'si':'no' }}
+
+  <input
+    type="submit"
+    value="Enviar"
+    [ngClass]="celsiusForm.invalid ? 'btn-danger' : 'btn-success'"
+    [disabled]="celsiusForm.invalid"
+  />
+</form> -->
+
+
+
+<div class="layout-column align-items-center mt-50">
+
+  <section class="layout-row align-items-center justify-content-between">
+    <label>Celsius: </label>
+    <input (keyup)="changeC($event)" [(ngModel)]="celsius" type="number" class="large" data-test-id="celsius-input"/>
+  </section>
+
+  <section class="layout-row align-items-center justify-content-between">
+      <label>Fahrenheit: </label>
+      <input (keyup)="changeF($event)" [(ngModel)]="fahrenheit" type="number" class="large" data-test-id="fahrenheit-input"/>
+  </section>
+
+<label>Fahrenheit: {{fahrenheit}} </label>
+
+</div>

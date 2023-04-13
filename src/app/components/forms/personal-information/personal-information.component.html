@@ -1,0 +1,115 @@
+<form [formGroup]="userForm" (ngSubmit)="validate()">
+  <div>
+    <label for="nombre">Nombre</label>
+    <input formControlName="name" type="text" />
+    <br />
+    <!-- <span> {{ userForm.get("name")?.value }} </span> -->
+    <div
+      *ngIf="
+        userForm.invalid &&
+        (userForm.get('name')?.dirty || userForm.get('name')?.touched)
+      "
+    >
+      <br />
+      <small *ngIf="userForm.get('name')?.errors?.['required']">
+        El nombre es requerido</small
+      >
+      <br />
+      <small *ngIf="userForm.get('name')?.errors?.['pattern']">
+        este campo solo acepta letras</small
+      >
+      <br />
+      <small *ngIf="userForm.get('name')?.errors?.['maxlength']">
+        este campo solo acepta maximo 6 caracteres</small
+      >
+
+      <br />
+      <small *ngIf="userForm.get('name')?.errors?.['minlength']">
+        este campo solo acepta minimo 3 caracteres</small
+      >
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <div>
+    <label for="apellidos">Apellido</label>
+    <input formControlName="lastname" type="text" />
+
+    <div
+      *ngIf="
+        userForm.invalid &&
+        (userForm.get('lastname')?.dirty || userForm.get('lastname')?.touched)
+      "
+    >
+      <br />
+      <small *ngIf="userForm.get('lastname')?.errors?.['required']">
+        El Apellido es requerido</small
+      >
+      <br />
+      <small *ngIf="userForm.get('lastname')?.errors?.['pattern']">
+        debe colocar el uno al final</small
+      >
+      <br />
+    </div>
+  </div>
+  <br />
+  <br />
+  <div>
+    <label for="bio">Biografia</label>
+    <textarea formControlName="bio"></textarea>
+
+    <div
+      *ngIf="
+        userForm.invalid &&
+        (userForm.get('bio')?.dirty || userForm.get('bio')?.touched)
+      "
+    >
+      <small *ngIf="userForm.get('bio')?.errors?.['minlength']">
+        minimo 11 caracteres</small
+      >
+
+      <br />
+      <small *ngIf="userForm.get('bio')?.errors?.['required']">
+        descripcion requerida</small
+      >
+      <br />
+
+      <br />
+      <small *ngIf="userForm.get('bio')?.errors?.['maxlength']">
+        maximo 11 caracteres</small
+      >
+      <br />
+    </div>
+
+    <ol *ngIf="userForm?.get('bio')">a</ol>
+  </div>
+
+  <div>
+    <input formControlName="gender" type="radio" value="hombre" /> Hombre
+    <input formControlName="gender" type="radio" value="mujer" /> Mujer
+    <input formControlName="gender" type="radio" value="otro" /> Otro
+  </div>
+  <br />
+  <select formControlName="dni" name="dni" id="">
+    <option value="v">venezolano</option>
+    <option value="e">extrangero</option>
+  </select>
+  <br />
+  <br />
+  <input formControlName="pet" type="checkbox" /> Tiene mascota ?
+
+  {{ userForm.get("pet")?.value ? "si" : "no" }}
+
+  <input
+    type="submit"
+    value="Enviar"
+    [ngClass]="userForm.invalid ? 'btn-danger' : 'btn-success'"
+    [disabled]="userForm.invalid"
+  />
+</form>
+
+<!-- <br>
+<input type="text" [(ngModel)]="valor" placeholder="nombre">
+<span> {{ valor }}</span>
+<br> -->

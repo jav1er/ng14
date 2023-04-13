@@ -1,0 +1,46 @@
+<p>Practicas con pipes</p>
+
+<span> {{ 3.6 | number: "1.0-0" }} :pipe number</span> <br />
+
+<br />
+<span> {{ p }} : pi</span> <br />
+<span> {{ p | number: "1.0-2" }} :pipe redondeado</span> <br />
+
+<span> {{ 3.635995 | currency: "COP ":"symbol":".0-2" }} </span> <br />
+<span> {{ 0.259 | percent }} </span> <br />
+<span> {{ d | date: "dd/MM/yyyy" }} </span> <br />
+
+<strong> pipe first </strong>
+<br />
+<span> {{ "wdwnododwdwdwdmaduro,murio" | first:"murio":'potencia':'powerful':1 }} </span> <br />
+<br />
+
+<span> {{ "levantando el nodo" | slice: 0:4 }} </span> <br />
+<span> {{ "COMOO ESTAS" | lowercase }} </span> <br />
+<span> {{ "como" | uppercase }} </span> <br />
+
+
+<span> {{'200.13' | currency}} </span> <br />
+
+<button (click)="goNew()">a New</button>
+<button (click)="emitir()">emitir evento</button>
+
+<div *ngIf="true">
+  <p *ngFor="let item of list">
+    {{ item }}
+  </p>
+</div>
+
+
+<input type="text" [(ngModel)]="valor" placeholder="nombre">
+
+<span> {{ valor }}</span>
+<div [ngSwitch]="2">
+  <div *ngSwitchCase="1">
+    {{ " caso 1" }}
+  </div>
+  <div *ngSwitchCase="2">
+    {{ " caso 2" }}
+  </div>
+  <div *ngSwitchDefault>output2</div>
+</div>

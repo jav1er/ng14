@@ -1,0 +1,84 @@
+
+
+https://angular.io/api/common/CurrencyPipe#description
+https://angular.io/api/common/DecimalPipe
+https://angular.io/api/common/JsonPipe
+https://angular.io/api/common/LowerCasePipe
+https://angular.io/api/common/SlicePipe
+
+
+
+
+pipe para buscar string dentro de un string
+
+<span> {{ 3.6 | number: "1.0-0" }} :pipe number</span> <br />
+
+manejar con 8 a 12 decimales
+funciones para transformar de string a number o al reves
+funciones de
+separador de decimales por defecto
+
+ngmodel
+ngclass
+
+
+
+
+
+Angular cli comandos
+javascript archivos
+Estructura de control  y funciones
+
+
+
+
+1.- variables - let vs var vs const
+1.- estructura
+
+
+
+lo que falta
+
+
+*destructuring
+
+data binding
+attribute directives
+structural directives
+
+
+let arr1 = [1, 2, 3, 8]
+let arr2 = [ ...arr1, 'c++', 'c', 'javascript']
+console.log(arr2)
+
+
+
+let arr3 = ['jarvis ', 'rangel']
+function getName(n1, n2){
+return n1 + n2
+}
+getName( ...arr3 )
+
+
+// [ 1, 2, 3, 8, 'c++', 'c', 'javascript']
+
+
+
+
+
+ng new segunda
+
+
+ng g c pages/about
+ng g c pages/contact
+ng g c pages/error404
+ng g c pages/home
+ng g c pages/news
+
+
+ng g c components/footer
+ng g c components/form-register
+ng g c components/header
+
+ng g p pipes/segundo
+ng g s provaiders/run

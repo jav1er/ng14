@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "xxx";
+  src: url(../public/font/ufonts.com_american-typewriter.ttf) format("truetype");
+}
+
+/* @font-face {
+  font-family: "american-typewriter-bold";
+  src: local("american-typewriter"),
+    url(../public/font/ufonts.com_american-typewriter-bold.ttf)
+      format("truetype");
+} */
+
+@font-face {
+  font-family: "a";
+  src: url(../public/font/aAsianNinja.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "b";
+  src: url(../public/font/Fuji_Quake_Zone.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "c";
+  src: url(../public/font/Mabook.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "e";
+  src: url(../public/font/SAKURATA.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "f";
+  src: url(../public/font/ufonts.com_american-typewriter.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "g";
+  src: url(../public/font/Racing_Catalogue.ttf) format("truetype");
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* body {
+  margin: 0px !important;
+} */
+
+:root {
+  --main-bg-color: brown;
+}
+
+app-header {
+  width: 100%;
+  background: cornflowerblue;
+  display: flex;
+}
+
+app-form-register {
+  width: 100%;
+  background: #77dd77;
+}
+
+app-footer {
+  width: 100%;
+  /*background: #77dd77;*/
+}
+
+app-first-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 1000px; */
+}

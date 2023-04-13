@@ -1,0 +1,19 @@
+.f {
+  background: var(--main-bg-color);
+  width: 100%;
+}
+
+p,
+span {
+  color: green;
+  font-size: 20px;
+  font-family: "b";
+}
+
+h1 {
+  margin: 0px;
+}
+
+app-footer {
+  width: 100%;
+}

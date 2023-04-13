@@ -1,0 +1,9 @@
+<app-header></app-header>
+<div class="container-about">
+  <h1>Estamos en about</h1>
+  <app-form-register class="form-registro" (llenaNodo)="llego($event)">
+  </app-form-register>
+
+  <span> valor del hijo: {{vhijo}}</span>
+</div>
+<app-footer [name]="'jarvis'"></app-footer>

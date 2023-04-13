@@ -1,0 +1,20 @@
+.btn-danger{
+  background: orange;
+}
+
+
+.btn{
+  background: blue;
+}
+
+.btn-success{
+  background: green;
+
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  flex-direction: column;
+}

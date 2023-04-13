@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  padding: 0px;
+  background: #84b6f4;
+}
+
+a {
+  width: 300px;
+  font-size: 30px;
+  padding: 30px;
+  color: green;
+  text-decoration: none;
+}
+
+/* a:hover,
+.activado {
+  color: black !important;
+  font-family: "g";
+} */
+
+.activado {
+  font-family: "e";
+}
